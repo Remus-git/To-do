@@ -11,8 +11,8 @@
                     </ul>
                 </div>
                 <div class="register">
-                    <div class="signIn">Sign in</div>
-                    <div class="signUp">Sign up</div>
+                    <div class="signIn" id="signIn">Sign in</div>
+                    <div class="signUp" id="signUp">Sign up</div>
                 </div>
                 <div class="hamburgerMenu">
                     <i class="fas fa-bars"></i>
