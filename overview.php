@@ -13,23 +13,9 @@
 </head>
 <body>
     <div class="container">
-        <section>
-            <div class="header">
-                <div class="logo">
-                    <a href="">ToDoo</a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <a href="overview.html"><li>Overview</li></a>
-                        <a href=""><li>To Dos</li></a>
-                        <a href=""><li>Help</li></a>
-                    </ul>
-                </div>
-                <div class="register">
-                    <div class="signIn">Sign in</div>
-                    <div class="signUp">Sign up</div>
-                </div>
-            </div>
-        </section>
+        <?php
+            include 'header.php';
+        ?>
+    </div>
 </body>
 </html>

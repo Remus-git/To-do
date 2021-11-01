@@ -21,6 +21,7 @@ body{
     justify-content: space-between;
     padding: 70px;
     padding-top: 30px;
+    padding-bottom: 10px;
 }
 .logo{
     width: 20%;
@@ -272,5 +273,9 @@ body{
     body{
         overflow: scroll;
         overflow-x: hidden;
+    }
+    .hero{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
