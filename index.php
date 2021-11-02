@@ -12,15 +12,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="registerFormContainer">
+    <section>
+        <?php
+            include 'signIn.php'
+        ?>
+    </section>
+    <section>
         <?php
             include 'register.php'
-        ?>
-    </div>    
+        ?>    
+    </section>
     <div class="container">
-        <?php
-            include 'header.php';
-        ?>
+       <section> 
+            <?php
+                include 'header.php';
+            ?>
+       </section>    
         <section>
             <div class="hero">
                 <div class="heroText">
