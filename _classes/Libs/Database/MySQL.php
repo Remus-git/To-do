@@ -12,7 +12,7 @@ class MySQL
     public function __construct(
     $dbhost = "localhost",
     $dbuser = "root",
-    $dbname = "ToDoApp",
+    $dbname = "todoapp",
     $dbpass = "",
  ) {
     $this->dbhost = $dbhost;

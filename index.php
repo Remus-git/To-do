@@ -14,13 +14,8 @@
 <body>
     <section>
         <?php
-            include 'signIn.php'
+            include 'addTask.php'
         ?>
-    </section>
-    <section>
-        <?php
-            include 'register.php'
-        ?>    
     </section>
     <div class="container">
        <section> 

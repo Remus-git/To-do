@@ -43,4 +43,18 @@
                 return $e->getMessage();
             }
         }
+        public function findEmailAndPassword($email,$password)
+        {
+            $statement = $this->db->prepare("
+                SELECT users.* FROM users WHERE users.email = :email AND users.password = :password
+            ");
+            $statement->execute([
+                ':email' => $email,
+                ':password'=> $password
+            ]
+            );
+
+            $row = $statement->fetchAll();
+            return $row ?? false;
+        }
     }
