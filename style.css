@@ -1,5 +1,5 @@
 *{
-    font-family: 'Lato', sans-serif;
+    
     font-family: 'Oswald', sans-serif;
 }
 body{
@@ -27,7 +27,7 @@ body{
     width: 20%;
 }
 .logo a{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: black;
     text-decoration: none;
@@ -102,6 +102,30 @@ body{
     font-size: 1.3rem;
 }
 /* ///////////////////////////////////////////////// */
+.authHeader{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: absolute;
+}
+.notification{
+    width: 5%;
+    display: flex;
+    align-items: center;
+}
+.fa-bell{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.fa-user-circle{
+    padding-left: 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+/* /////////////////////////////////////////////////////// */
 .hero{
     padding: 70px;
     width: 100%;
@@ -213,6 +237,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .registerForm label{
     width: 80%;
 }
@@ -346,89 +371,284 @@ body{
     color: royalblue;
     left: 70px;
 }
-/* ////////////////////////////////////////////////////////////// */
-.addTaskContainer{
+
+/* ////////////////////////////////////////////////////////////////// */
+.overViewContainer{
     width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+}
+.sideProfile{
+    width: 17%;
+    height: inherit;
+    border-right: solid rgb(241, 241, 241) 3px;
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    padding-left: 70px;
+    width: 78%;
+    border-right: solid royalblue;
+    display: flex;
+    margin-top: 150px;
+    cursor: pointer;
+}
+.profile img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.profileName{
+    padding-top: 4px;
+    width:70%;
+    padding-left: 5px;
+}
+.profileName h4{
+    font-weight: thin;
+    margin: 0px;
+}
+.profileName span{
+    padding-left: 2px;
+    opacity: 80%;
+    font-size: .8rem;
+}
+.sideProfileMenu{
+    padding-left: 70px;
+    width: 72%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-top: 30px;
+    height: 50%;
+}
+.menuOverView{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.menuOverView img{
+    padding-top: 4px;
+    padding-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+.menuToDo{
+    display: flex;
+}
+.menuToDo img{
+    padding-top: 4px;
+    padding-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+.menuHelp{
+    display: flex;
+}
+.menuHelp img{
+    padding-top: 4px;
+    padding-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+.sideProfileMenu ul{
+    width: 100%;
+    list-style: none;
+    height: inherit;
+}
+.sideProfileMenu a{
+    width: 100%;
+    height: 45px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #888888;
+    display: block;
+    margin-bottom: 40px;
+}
+.sideProfileMenu li{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.sideProfileLogout{
+    padding-top: 130px;
+    padding-left: 70px;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+.sideProfileLogout i{
+    font-size: 1.4rem;
+    opacity: 50%;
+    text-align: center;
+}
+.sideProfileLogout a{
+    padding-left: 30px;
+    color: royalblue;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.sideProfileLogout a:hover{
+    color: blue;
+}
+.overView{
+    padding-top: 10px;
+    width: 80%;
+    height: 100%;
+    padding-left: 20px;
+}
+.overViewTaskTitle{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+}
+.toDoTitle,.inProgressTitle,.completeTitle{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #b6b6b6;
+    cursor: pointer;
+    margin-right: 60px;
+}
+.toDoTitle:hover,.inProgressTitle:hover,.completeTitle:hover{
+    color: black;
+}
+.overViewTaskContainer{
+    margin-top: 40px;
+    height: 82vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+}
+.overViewTaskContainer::-webkit-scrollbar{
     display: none;
 }
-.addTaskSubContainer{
-    position: relative;
-    width: 40%;
-    height: auto;
-    background-color: white;
+.task{
+    width: 350px;
+    height: 200px;
+    background-color: rgb(228, 228, 228);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 1px 1px 10px 1px #888888;
 }
-.addTaskTitle{
-    padding-left: 80px;
+.task1{
+    width: 350px;
+    height: 300px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 20px;
 }
-.addTaskTitle h2{
-    font-size: 2.8rem;
-    margin-bottom: 3px;
-}
-.addTaskTitle span{
-    font-size: 1.05rem;
-    color: grey;
-    opacity: 80%;
+/* ///////////////////////////////////////////////////////////////////////// */
+.addTaskContainer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;   
 }
 .addTask{
-    width: 100%;
+    padding-top: 10px;
+    width: 80%;
     height: 100%;
+    padding-left: 20px;
+}
+.addTaskTitle{
+    padding-top: 10px;
+    padding-left: 30px;
 }
 .addTask form{
+    margin-top: 90px;
     width: 100%;
+    height: 57vh;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 1px 10px 20px .1px  rgb(204, 217, 255);
+    display: flex;
+    position: relative;
+}
+.taskNameDes{
+    width:50%;
+    margin-left: 40px;
+}
+.taskDeadline{
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 74px;
 }
 .addTask label{
-    font-size: 1.1rem;
-    width: 80%;
-    padding-top: 10px;
-}
-.addTask textarea{
-    width: 80%;
-    background-color: transparent;
-    border-radius: 8px;
-    resize: none;
-    border:solid rgb(179, 179, 179) 1px ;
-    margin-bottom: 20px;
-    padding: 10px;
+    font-size: 1.3rem;
+    display: block;
+    width: 30%;
+    padding-top: 20px;
+    color: #7c9cd8;
+    font-weight: bold;
 }
 .addTask input{
-    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
     width: 80%;
     height: 50px;
-    border-radius: 8px;
-    border: solid rgb(179, 179, 179) 1px;
+    border-radius: 7px;
+    border: solid #e8f0ff 3px;
     background-color: transparent;
-    padding: 4px;
 }
-#addTaskBtn{
-    width: 40%;
-    height: 60px;
-    background-color: #41454e;
-    color: white;
+.addTask textarea{
     margin-top: 20px;
+    border: solid #e8f0ff 3px;
+    padding: 5px;
+    border-radius: 7px;
+    width: 80%;
+    height: 150px;
+    resize: none;
 }
-#addTaskCancel i{
+.taskColors{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.red,.green,.blue,.yellow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 50px;
     cursor: pointer;
-    font-size: 1.3rem;
-    color: black;
-    position: absolute;
-    right: 20px;
-    top: 30px;
 }
-/* ////////////////////////////////////////////////////////////////// */
+.red:hover,.green:hover,.blue:hover,.yellow:hover{
+    border: solid 1.2px;
+}
+.red{
+    background-color: rgb(255, 95, 95);
+}
+.blue{
+    background-color: rgb(111, 139, 233);
+}
+.yellow{
+    background-color: rgb(252, 252, 119);
+}
+.green{
+    background-color: rgb(108, 255, 108);
+}
+#taskSubmit{
+    width: 15%;
+    height: 13%;
+    color: white;
+    font-size: 1rem;
+    background-color: royalblue;
+    border-radius: 40px;
+    position: absolute;
+    bottom: -23px;
+    cursor: pointer;
+    right: 50%;
+    font-weight: bold;
+}
+#taskSubmit:hover{
+    background-color: rgb(47, 61, 190);
+}
+/* //////////////////////////////////////////////////////////////////////////// */
 @media(max-width:1556px){
     .hero{
         padding-top: 0;
@@ -515,6 +735,9 @@ body{
     }
     .hamburgerMenu{
         display: flex;
+    }
+    .notification{
+        display: none;
     }
     .heroImage{
         display: none;

@@ -7,16 +7,11 @@
     <title>ToDo App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap" rel="stylesheet">
+    
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <?php
-            include 'addTask.php'
-        ?>
-    </section>
     <div class="container">
        <section> 
             <?php
@@ -35,10 +30,7 @@
                             is merely a thought or some phenimenon apperaing in you.
                              You are greater than this thing; because if it comes and goes, the witness of it remains.
                         </span>
-                        <div class="addNew">
-                            <h3>Add Your First Task Here!</h3>
-                            <button>Add</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="heroImage">

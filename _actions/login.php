@@ -15,7 +15,7 @@
 
     if($user){
         $_SESSION['user'] = $user;
-        HTTP::redirect("/header.php");
+        HTTP::redirect("/overview.php");
     }else{
         HTTP::redirect("/signIn.php","incorrect=1");
     }

@@ -8,7 +8,7 @@ class HTTP
     static function redirect($path, $query= "")
     {
         $url = static::$base . $path;
-        if($query);
+        if($query) $url .= "?$query";
 
         header("location: $url");
         exit();
