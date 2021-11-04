@@ -12,9 +12,13 @@
         public function insert($data){
             try{
                 $query = "
-                            INSERT INTO tasks(title,description,deadline)
-                            VALUES(:title,:description,:deadline)
+                            INSERT INTO tasks(title,description,deadline,role_id)
+                            VALUES(:title,:description,:deadline,36)
                 ";
+                $statement = $this->db->prepare($query);
+                $statement->execute($data);
+
+                return $this->db->lastInsertId();
             }catch(PDOException $e){
                 return $e->getMessage();
             }

@@ -1,9 +1,9 @@
 <?php
-    include('../vendor/autoload.php');
+    session_start();
+    include("../vendor/autoload.php");
     use Libs\Database\TasksTable;
     use Libs\Database\MySQL;
     use Helpers\HTTP;
-
     $data = [
         "title"=>$_POST['title'] ?? 'Unknown',
         "description"=>$_POST['description'] ?? 'Unknown',
