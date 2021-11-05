@@ -19,7 +19,7 @@
             include 'sideProfile.php'
         ?>
         <div class="addTask">
-            <form action="taskAdding.php">
+            <form action="/_actions/taskAdding.php" method="post">
                     <div class="taskNameDes">
                         <div class="addTaskTitle">
                             <h2>Add New Task</h2>
@@ -32,16 +32,12 @@
                     <div class="taskDeadline">
                         <label for="deadline">Deadline</label>
                         <input type="date" name="deadline" id="deadline">
-                        <!-- <div class="taskColors">
-                            <div class="red"></div>
-                            <div class="green"></div>
-                            <div class="blue"></div>
-                            <div class="yellow"></div>
-                        </div> -->
                     </div>
                     <input type="submit" value="CREATE NEW TASK" id="taskSubmit">
             </form>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>

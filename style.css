@@ -388,10 +388,13 @@ body{
 .profile{
     padding-left: 70px;
     width: 78%;
-    border-right: solid royalblue;
     display: flex;
     margin-top: 150px;
     cursor: pointer;
+    position: relative;
+}
+.profileFlex{
+    flex-direction: column;
 }
 .profile img{
     width: 45px;
@@ -412,6 +415,26 @@ body{
     opacity: 80%;
     font-size: .8rem;
 }
+.editIcon{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 99;
+    display: none;
+}
+.editIcon:hover{
+    color: royalblue;
+}
+.hideProfile{
+    height: auto;
+    display: none;
+}
+.hideProfile h4{
+    color: #888888;
+}
+.showProfile{
+    display: block;
+}
 .sideProfileMenu{
     padding-left: 70px;
     width: 72%;
@@ -422,9 +445,12 @@ body{
     height: 50%;
 }
 .menuOverView{
+    margin-left: 3px;
     display: flex;
     width: 100%;
+    height: 20%;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .menuOverView img{
     padding-top: 4px;
@@ -432,8 +458,14 @@ body{
     width: 30px;
     height: 30px;
 }
+
 .menuToDo{
+    margin-left: 3px;
     display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 .menuToDo img{
     padding-top: 4px;
@@ -442,13 +474,21 @@ body{
     height: 30px;
 }
 .menuHelp{
+    margin-left: 3px;
     display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 .menuHelp img{
     padding-top: 4px;
     padding-right: 20px;
     width: 30px;
     height: 30px;
+}
+.activeMenu{
+    border-right: solid royalblue;
 }
 .sideProfileMenu ul{
     width: 100%;
