@@ -1,5 +1,4 @@
 <?php
-
     session_start();
     include("../vendor/autoload.php");
     use Libs\Database\MySQL;

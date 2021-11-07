@@ -1,9 +1,10 @@
+
 <div class="sideProfile">
             <div class="profile"> 
                 <img src="/Theseaship/ship/Sea-with-the-ship-sunset-.png" alt="">
                 <div class="profileName">
-                    <h4>David Kane</h4>
-                    <span>Hey David</span>
+                    <h4><?= $auth[0]->name ?></h4>
+                    <span>Hey <?= $auth[0]->name ?></span>
                 </div>
                 <div class="editIcon">
                     <i class="far fa-edit"></i>
@@ -11,15 +12,15 @@
                 <div class="hideProfile">
                     <div class="hideProfileName">
                         <h4>Name</h4>
-                        <h3>David Kane</h3>
+                        <h3><?= $auth[0]->name ?></h3>
                     </div>
                     <div class="hideProfileEmail">
                         <h4>Email</h4>
-                        <h3>Davidan@gmail.com</h3>
+                        <h3><?= $auth[0]->email ?></h3>
                     </div>
                     <div class="hideProfilePhone">
                         <h4>Phone</h4>
-                        <h3>012-335-462-88</h3>
+                        <h3><?= $auth[0]->phone ?></h3>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,13 @@
+<?php
+    include("vendor/autoload.php");
+    use Libs\Database\MySQL;
+    use Libs\Database\TasksTable;
+    use Helpers\Auth;
+    $table = new TasksTable(new MySQL());
+    $auth = Auth::check();
+    $taskData = $table->getTasks();
+    $taskkey = end($taskData);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,58 +26,39 @@
         ?>
     <div class="overViewContainer">
         <?php
-            include'sideProfile.php '
+           include 'sideProfile.php';
         ?>
         <div class="overView">
             <div class="overViewTitle">
                 <h1>Overview</h1>
+    
             </div>
             <div class="overViewTaskTitle">
                 <div class="toDoTitle">
                     To Do
                 </div>
-                <div class="inProgressTitle">
-                    In Progress
+                <div class="expiredTitle">
+                    Expireds
                 </div>
                 <div class="completeTitle">
                     Completed
                 </div>
             </div>
             <div class="overViewTaskContainer">
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task1"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
-                <div class="task"></div>
+                        <?php
+                            foreach ($taskData as $task) {?>
+                                <div class="task">
+                                    <div class="displayTitle">
+                                        <h2><?=$task->title ?></h2>
+                                    </div>
+                                    <div class="displayDescription">
+                                        <span><?= $task->description ?></span>
+                                    </div>
+                                    <div class="displayDeadline">
+                                        <span><?= $task->deadline?><span>
+                                    </div>
+                                </div>    
+                        <?php } ?>
             </div>
         </div>
     </div>

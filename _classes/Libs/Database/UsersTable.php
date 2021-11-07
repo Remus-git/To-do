@@ -31,18 +31,6 @@
                 return $e->getMessage();
             }
         }
-        public function getAll()
-        {
-            try{
-            $statement = $this->db->query("
-                SELECT users.* FROM users
-            ");
-            return $statement->fetchAll();
-            }catch(PDOException $e)
-            {
-                return $e->getMessage();
-            }
-        }
         public function findEmailAndPassword($email,$password)
         {
             $statement = $this->db->prepare("

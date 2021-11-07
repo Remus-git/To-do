@@ -489,6 +489,7 @@ body{
 }
 .activeMenu{
     border-right: solid royalblue;
+    font-weight: 600;
 }
 .sideProfileMenu ul{
     width: 100%;
@@ -544,19 +545,18 @@ body{
     display: flex;
     margin-top: 40px;
 }
-.toDoTitle,.inProgressTitle,.completeTitle{
+.toDoTitle,.expiredTitle,.completeTitle{
     font-size: 1.2rem;
     font-weight: 600;
     color: #b6b6b6;
     cursor: pointer;
     margin-right: 60px;
 }
-.toDoTitle:hover,.inProgressTitle:hover,.completeTitle:hover{
+.toDoTitle:hover,.expiredTitle:hover,.completeTitle:hover{
     color: black;
 }
 .overViewTaskContainer{
     margin-top: 40px;
-    height: 82vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -572,8 +572,17 @@ body{
 .task{
     width: 350px;
     height: 200px;
-    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+    background-color: rgba(243, 243, 243,50%);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.task:hover{
+    width: 360px;
+    height: 210px;
 }
 .task1{
     width: 350px;
@@ -644,6 +653,7 @@ body{
     width: 80%;
     height: 150px;
     resize: none;
+    font-size: 1.2rem;
 }
 .taskColors{
     height: 50%;

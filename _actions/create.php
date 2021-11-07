@@ -17,5 +17,5 @@
         $table->insert($data);
         HTTP::redirect("/signIn.php", $_SESSION['signUp'] = true);
     }else{
-        HTTP::redirect("/register.php");
+        HTTP::redirect("/register.php", "error = true");
     }
