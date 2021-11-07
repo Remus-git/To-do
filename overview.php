@@ -6,7 +6,6 @@
     $table = new TasksTable(new MySQL());
     $auth = Auth::check();
     $taskData = $table->getTasks();
-    $taskkey = end($taskData);
 ?>
 <!DOCTYPE html>
 <html lang="en">
