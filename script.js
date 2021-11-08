@@ -5,6 +5,8 @@ const editIcon = $('.editIcon');
 const menuOverView = $('.menuOverview');
 const menuAddToDo = $('.menuToDo');
 const menuHelp = $('.menuHelp');
+const profileEdit = $('.editIcon');
+const profile = $('.profile');
 
 profileBtn.click(function(){
     profileBtn.toggleClass('profileFlex');
@@ -21,4 +23,8 @@ $(document).ready(function() {
         }
     });
 });
+
+profileEdit.click(function(){
+    profile.load('profileEdit.php');
+})
 

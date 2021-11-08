@@ -51,7 +51,7 @@
             <h2>Expired Tasks</h2>
             <div class="overViewTaskContainer">
                         <?php foreach ($taskData as $task) : ?>
-                            <?php if($task->expired == 1 ) : ?>
+                            <?php if($task->expired == 1 && $task->completed == 0) : ?>
                                 <div class="expiredTask">
                                     <div class="displayTask">
                                         <div class="displayTitle">
@@ -70,7 +70,7 @@
                                         </div>
                                         <div class="taskDelete">
                                             <a href="/_actions/delete.php?id=<?=$task->id?>"><i class="far fa-times-circle"></i></a>
-                                            <a href="/_actions/complete.php?id=<?=$task->id?>"><i class="far fa-check-circle"></i></a>
+                                            
                                         </div>
                                     </div>
                                 </div>

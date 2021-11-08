@@ -444,6 +444,38 @@ body{
     padding-top: 30px;
     height: 50%;
 }
+.profile form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.profile label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.profile input{
+    padding: 5px;
+    font-size: 1.2rem;
+    width: 80%;
+    height: 40px;
+    border-radius: 7px;
+    border: solid #e8f0ff 3px;
+    background-color: transparent
+}
+.taskUpdateBtn{
+    border: none;
+    background-color: royalblue;
+    width: 60%;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+   margin-left: 10%;
+   color: white;
+}
 .menuOverView{
     margin-left: 3px;
     display: flex;
