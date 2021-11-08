@@ -29,8 +29,7 @@
         ?>
         <div class="overView">
             <div class="overViewTitle">
-                <h1>Overview</h1>
-    
+                <h1>Overview</h1>   
             </div>
             <div class="overViewTaskTitle">
                 <div class="toDoTitle">
@@ -41,7 +40,7 @@
                 <div class="expiredTitle">
                     <a href="/overviewExpired.php">
                         Expireds
-                    </a>  
+                    </a>    
                 </div>
                 <div class="completeTitle">
                     <a href="/overviewCompleted.php">
@@ -49,11 +48,11 @@
                     </a>    
                 </div>
             </div>
-            <h2>To Do Tasks</h2>
+            <h2>Expired Tasks</h2>
             <div class="overViewTaskContainer">
                         <?php foreach ($taskData as $task) : ?>
-                            <?php if($task->completed == 0 && $task->expired == 0) : ?>
-                                <div class="task">
+                            <?php if($task->expired == 1 ) : ?>
+                                <div class="expiredTask">
                                     <div class="displayTask">
                                         <div class="displayTitle">
                                             <h2><?=$task->title ?></h2>

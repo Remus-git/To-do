@@ -37,7 +37,7 @@
             <input type="email" name="email" id="SignInemail">
             <label for="password">Password</label>
             <input type="password" name="password" id="SignInpassword">
-            <input type="submit" value="Submit" id="signInsubmit">
+            <input type="submit" value="Login" id="signInsubmit">
             <a href="register.php">signUp</a>
         </form>
     </div>

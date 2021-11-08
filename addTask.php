@@ -37,7 +37,7 @@
                     </div>
                     <div class="taskDeadline">
                         <label for="deadline">Deadline</label>
-                        <input type="date" name="deadline" id="deadline">
+                        <input type="datetime-local" name="deadline" id="deadline">
                     </div>
                     <input type="submit" value="CREATE NEW TASK" id="taskSubmit">
             </form>

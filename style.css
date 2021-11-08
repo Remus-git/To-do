@@ -545,14 +545,15 @@ body{
     display: flex;
     margin-top: 40px;
 }
-.toDoTitle,.expiredTitle,.completeTitle{
+.toDoTitle a,.expiredTitle a,.completeTitle a{
     font-size: 1.2rem;
     font-weight: 600;
     color: #b6b6b6;
     cursor: pointer;
     margin-right: 60px;
+    text-decoration: none;
 }
-.toDoTitle:hover,.expiredTitle:hover,.completeTitle:hover{
+.toDoTitle a:hover,.expiredTitle a:hover,.completeTitle a:hover{
     color: black;
 }
 .overViewTaskContainer{
@@ -573,22 +574,129 @@ body{
     width: 350px;
     height: 200px;
     cursor: pointer;
-    background-color: rgba(243, 243, 243,50%);
+    background-color: rgba(221, 239, 255, 0.6);
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-left: 20px;
+    padding-top: 20px;
+    overflow: hidden;
 }
 .task:hover{
     width: 360px;
     height: 210px;
+    transition: .3s;
 }
-.task1{
+.task:hover .displayTitle h2{
+    font-size: 1.6rem;
+    transition: .3s;
+}
+.task:hover .displayDescription span{
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.task:hover .taskDelete a{
+    transform: translateY(5px);
+    transition: .5s;
+}
+.completedTask{
     width: 350px;
-    height: 300px;
-    background-color: rgb(228, 228, 228);
+    height: 200px;
+    cursor: pointer;
+    background-color: rgba(222, 255, 221, 0.6);
     border-radius: 20px;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.completedTask:hover{
+    width: 360px;
+    height: 210px;
+    transition: .3s;
+}
+.completedTask:hover .displayTitle h2{
+    font-size: 1.6rem;
+    transition: .3s;
+}
+.completedTask:hover .displayDescription span{
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.completedTask:hover .taskDelete a{
+    transform: translateY(5px);
+    transition: .5s;
+}
+.expiredTask{
+    width: 350px;
+    height: 200px;
+    cursor: pointer;
+    background-color: rgba(250, 183, 183, 0.6);
+    border-radius: 20px;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.expiredTask:hover{
+    width: 360px;
+    height: 210px;
+    transition: .3s;
+}
+.expiredTask:hover .displayTitle h2{
+    font-size: 1.6rem;
+    transition: .3s;
+}
+.expiredTask:hover .displayDescription span{
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.expiredTask:hover .taskDelete a{
+    transform: translateY(5px);
+    transition: .5s;
+}
+.displayTask{
+    width: 85%;
+}
+.displayTitle h2{
+    font-weight: bold;
+    font-size: 1.55rem;
+    margin: 0;
+}
+.displayDescription{
+    height: 65%;
+}
+.displayDescription span{
+    font-size: 1.1rem;
+}
+.displayDeadline{
+    font-size: 1.1rem;
+}
+.taskUpdate{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.taskEdit i{
+     margin-left: 20px;
+}
+.taskEdit i:hover{
+    color: royalblue;
+}
+.taskDelete{
+    margin-bottom: 20px;
+    display: flex;
+}
+.taskDelete a {
+    margin-right: 20px;
+    font-size: 1.4rem;
+    transform: translateY(48px);
+    color: black;
+}
+.fa-times-circle:hover{
+    color: rgb(236, 71, 71);
+}
+.fa-check-circle:hover{
+    color: rgb(82, 184, 82);
 }
 /* ///////////////////////////////////////////////////////////////////////// */
 .addTaskContainer{

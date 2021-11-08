@@ -35,7 +35,7 @@
             <input type="text" name="phone" id="phone">
             <label for="password">Password</label>
             <input type="password" name="password" id="registerPassword" minlength="8" required>
-            <input type="submit" value="Submit" id="registerSubmit">
+            <input type="submit" value="Register" id="registerSubmit">
             <a href="signIn.php">Already have an account?Sign In</a>
         </form>
     </div>

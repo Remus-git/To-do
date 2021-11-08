@@ -41,5 +41,24 @@
             ]);
             return $statement->fetchAll();
         }
-    
+        public function delete($id){
+            $statement = $this->db->prepare("
+                DELETE FROM tasks WHERE id = :task_id
+            ");
+            $statement->execute([':task_id' => $id]);
+        }
+        public function complete($id){
+            $statement = $this->db->prepare("
+                UPDATE tasks SET completed = 1,updated_at = NOW()  WHERE id = :task_id
+                ");
+                $statement->execute([
+                    ':task_id' => $id
+                ]);
+        }
+        public function expired(){
+            $statement = $this->db->prepare("
+                UPDATE tasks SET expired = 1
+            ");
+            $statement->execute();
+        }
     }        

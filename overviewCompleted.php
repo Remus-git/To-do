@@ -49,11 +49,11 @@
                     </a>    
                 </div>
             </div>
-            <h2>To Do Tasks</h2>
+            <h2>Completed Tasks</h2>
             <div class="overViewTaskContainer">
                         <?php foreach ($taskData as $task) : ?>
-                            <?php if($task->completed == 0 && $task->expired == 0) : ?>
-                                <div class="task">
+                            <?php if($task->completed == 1 ) : ?>
+                                <div class="completedTask">
                                     <div class="displayTask">
                                         <div class="displayTitle">
                                             <h2><?=$task->title ?></h2>
@@ -71,7 +71,6 @@
                                         </div>
                                         <div class="taskDelete">
                                             <a href="/_actions/delete.php?id=<?=$task->id?>"><i class="far fa-times-circle"></i></a>
-                                            <a href="/_actions/complete.php?id=<?=$task->id?>"><i class="far fa-check-circle"></i></a>
                                         </div>
                                     </div>
                                 </div>
