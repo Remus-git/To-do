@@ -54,5 +54,6 @@
                 ':updateEmail' => $updateEmail,
                 ':updatePhone' => $updatePhone,
             ]);
+            return $this->db->lastInsertId();
         }
     }

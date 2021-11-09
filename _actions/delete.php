@@ -5,6 +5,5 @@
     use Helpers\HTTP;
     $table = new TasksTable(new MySQL());
     $id = $_GET['id'];
-    var_dump($id);
     $table->delete($id);
     HTTP::redirect("/overview.php");
