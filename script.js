@@ -7,6 +7,10 @@ const menuAddToDo = $('.menuToDo');
 const menuHelp = $('.menuHelp');
 const profileEdit = $('.editIcon');
 const profile = $('.profile');
+const taskEdit = $('.taskEdit i');
+const taskDisplayWrapper = $('.taskDisplayWrapper');
+const taskEditWrapper = $('.taskEditWrapper');
+const taskCancel = $('#taskCancel i');
 
 profileBtn.click(function(){
     profileBtn.toggleClass('profileFlex');
@@ -26,5 +30,14 @@ $(document).ready(function() {
 
 profileEdit.click(function(){
     profile.load('profileEdit.php');
+})
+taskEdit.click(function(){
+    taskDisplayWrapper.toggle();
+    taskEditWrapper.toggle();
+    taskEdit.addClass('fas fa-times');
+})
+taskCancel.click(function(){
+    taskEdit.addClass('fas fa-edit')
+
 })
 

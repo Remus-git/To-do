@@ -61,4 +61,16 @@
             ");
             $statement->execute();
         }
+        public function taskEdit($updateTitle,$updateDescription,$updateDeadline,$taskId){
+            $statement = $this->db->prepare("
+                UPDATE tasks SET title = :updateTitle,description = :updateDescription, deadline = :updateDeadline
+                WHERE tasks.id = :taskId
+            ");
+            $statement->execute([
+             ':updateTitle' => $updateTitle,
+             ':updateDescription' => $updateDescription,
+             ':updateDeadline' => $updateDeadline,
+             ':taskId' => $taskId
+            ]);
+        }
     }        

@@ -54,24 +54,38 @@
                         <?php foreach ($taskData as $task) : ?>
                             <?php if($task->completed == 0 && $task->expired == 0) : ?>
                                 <div class="task">
-                                    <div class="displayTask">
-                                        <div class="displayTitle">
-                                            <h2><?=$task->title ?></h2>
+                                    <div class="taskDisplayWrapper">
+                                        <div class="displayTask">
+                                            <div class="displayTitle">
+                                                <h2><?=$task->title ?></h2>
+                                            </div>
+                                            <div class="displayDescription">
+                                                <span><?= $task->description ?></span>
+                                            </div>
+                                            <div class="displayDeadline">
+                                                <span><?= $task->deadline?><span>
+                                            </div>
+                                        </div>    
+                                        <div class="taskUpdate">
+                                            <div class="taskEdit">
+                                                <i class="fas fa-edit"></i>
+                                            </div>
+                                            <div class="taskDelete">
+                                                <a href="/_actions/delete.php?id=<?=$task->id?>"><i class="far fa-times-circle"></i></a>
+                                                <a href="/_actions/complete.php?id=<?=$task->id?>"><i class="far fa-check-circle"></i></a>
+                                            </div>
                                         </div>
-                                        <div class="displayDescription">
-                                            <span><?= $task->description ?></span>
-                                        </div>
-                                        <div class="displayDeadline">
-                                            <span><?= $task->deadline?><span>
-                                        </div>
-                                    </div>    
-                                    <div class="taskUpdate">
-                                        <div class="taskEdit">
+                                    </div>
+                                    <div class="taskEditWrapper">
+                                        <form action="/_actions/taskEdit.php" method="post">
+                                            <h4>Edit Your Task</h4>
+                                            <input type="text" value="<?=$task->title?>" name="title" id="title">
+                                            <input type="text" value="<?=$task->description?>" name="description" id="description">
+                                            <input type="datetime-local" name="deadline" id="deadline" value="<?= date('Y-m-d\TH:i',strtotime($task->deadline)) ?>">
+                                            <button type="submit">Save</button>
+                                        </form>
+                                        <div class="taskEdit"id="taskCancel">
                                             <i class="fas fa-edit"></i>
-                                        </div>
-                                        <div class="taskDelete">
-                                            <a href="/_actions/delete.php?id=<?=$task->id?>"><i class="far fa-times-circle"></i></a>
-                                            <a href="/_actions/complete.php?id=<?=$task->id?>"><i class="far fa-check-circle"></i></a>
                                         </div>
                                     </div>
                                 </div>
