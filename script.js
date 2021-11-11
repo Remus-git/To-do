@@ -7,9 +7,8 @@ const menuAddToDo = $('.menuToDo');
 const menuHelp = $('.menuHelp');
 const profileEdit = $('.editIcon');
 const profile = $('.profile');
+const taskCard = $('.task')
 const taskEdit = $('.taskEdit i');
-const taskDisplayWrapper = $('.taskDisplayWrapper');
-const taskEditWrapper = $('.taskEditWrapper');
 const taskCancel = $('#taskCancel i');
 
 profileBtn.click(function(){
@@ -32,12 +31,28 @@ profileEdit.click(function(){
     profile.load('profileEdit.php');
 })
 taskEdit.click(function(){
-    taskDisplayWrapper.toggle();
-    taskEditWrapper.toggle();
-    taskEdit.addClass('fas fa-times');
+    let buttonValue = $(this).data("value");
+    let parent = $(this).parent().parent().parent().parent();
+    let parentValue = parent.data("value");
+    if(buttonValue == parentValue){
+       let taskDisplayWrapper =parent.children()[0];
+       let taskEditWrapper = parent.children()[1];
+       $(taskDisplayWrapper).toggle();
+       $(taskEditWrapper).toggle();
+    }
+    taskCancel.addClass('fas fa-times')
+    
 })
 taskCancel.click(function(){
-    taskEdit.addClass('fas fa-edit')
-
+    let buttonValue = $(this).data("value");
+    let parent = $(this).parent().parent().parent();
+    let parentValue = parent.data("value");
+    if(buttonValue == parentValue){
+       let taskDisplayWrapper =parent.children()[0];
+       let taskEditWrapper = parent.children()[1];
+       $(taskDisplayWrapper).toggle();
+       $(taskEditWrapper).toggle();
+    }
+    
 })
 

@@ -53,7 +53,7 @@
             <div class="overViewTaskContainer">
                         <?php foreach ($taskData as $task) : ?>
                             <?php if($task->completed == 0 && $task->expired == 0) : ?>
-                                <div class="task">
+                                <div class="task" data-value="<?=$task->id?>">
                                     <div class="taskDisplayWrapper">
                                         <div class="displayTask">
                                             <div class="displayTitle">
@@ -68,7 +68,7 @@
                                         </div>    
                                         <div class="taskUpdate">
                                             <div class="taskEdit">
-                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-edit" data-value="<?= $task->id?>"></i>
                                             </div>
                                             <div class="taskDelete">
                                                 <a href="/_actions/delete.php?id=<?=$task->id?>"><i class="far fa-times-circle"></i></a>
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                     <div class="taskEditWrapper">
-                                        <form action="/_actions/taskEdit.php" method="post">
+                                        <form action="/_actions/taskUpdate.php?id=<?=$task->id?>" method="post">
                                             <h4>Edit Your Task</h4>
                                             <input type="text" value="<?=$task->title?>" name="title" id="title">
                                             <input type="text" value="<?=$task->description?>" name="description" id="description">
@@ -85,7 +85,7 @@
                                             <button type="submit">Save</button>
                                         </form>
                                         <div class="taskEdit"id="taskCancel">
-                                            <i class="fas fa-edit"></i>
+                                            <i class="fas fa-edit" data-value="<?=$task->id?>"></i>
                                         </div>
                                     </div>
                                 </div>
